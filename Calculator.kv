@@ -1,0 +1,102 @@
+#:kivy 2.0.0
+
+<Screen>:
+    FloatLayout:
+        pos: 0, 0
+        size: root.width, root.height
+        canvas:
+            Color:
+                rgb: .12, .36, .03
+            Rectangle:
+                pos: 0, self.height*0.8
+                size: self.width, 100
+        Label:
+            text: str(root.innput)
+            font_size: root.width*0.07
+            pos: root.width*0.001, root.height*0.38
+        Label:
+            text: "By Brosskev"
+            font_size: root.width*0.02
+            pos: root.width*-0.42, root.height*0.33
+
+    GridLayout:
+        cols: 3
+        size: root.width*0.8, root.height*0.78
+        spacing: 10, 7
+        pos: root.width*0.1, 0
+        Button:
+            background_color: .31,.86,.11
+            text: '1'
+            font_size: self.width*0.2
+            on_press: root.write(1)
+        Button:
+            background_color: .31,.86,.11
+            text: '2'
+            font_size: self.width*0.2
+            on_press: root.write(2)
+        Button:
+            background_color: .31,.86,.11
+            text: '3'
+            font_size: self.width*0.2
+            on_press: root.write(3)
+        Button:
+            background_color: .31,.86,.11
+            text: '4'
+            font_size: self.width*0.2
+            on_press: root.write(4)
+        Button:
+            background_color: .31,.86,.11
+            text: '5'
+            font_size: self.width*0.2
+            on_press: root.write(5)
+        Button:
+            background_color: .31,.86,.11
+            text: '6'
+            font_size: self.width*0.2
+            on_press: root.write(6)
+        Button:
+            background_color: .31,.86,.11
+            text: '7'
+            font_size: self.width*0.2
+
+            on_press: root.write(7)
+        Button:
+            background_color: .31,.86,.11
+            text: '8'
+            font_size: self.width*0.2
+            on_press: root.write(8)
+        Button:
+            background_color: .31,.86,.11
+            text: '9'
+            font_size: self.width*0.2
+            on_press: root.write(9)
+        Button:
+            background_color: .31,.86,.11
+            text: '+'
+            font_size: self.width*0.2
+            on_press: root.plus()
+        Button:
+            background_color: .31,.86,.11
+            text: '-'
+            font_size: self.width*0.2
+            on_press: root.minus()
+        Button:
+            background_color: .31,.86,.11
+            text: '*'
+            font_size: self.width*0.2
+            on_press: root.multiply()
+        Button:
+            background_color: .31,.86,.11
+            text: '/'
+            font_size: self.width*0.2
+            on_press: root.divide()
+        Button:
+            background_color: .31,.86,.11
+            text: 'C'
+            font_size: self.width*0.2
+            on_press: root.clean()
+        Button:
+            background_color: .31,.86,.11
+            text: '='
+            font_size: self.width*0.2
+            on_press: root.solve()
